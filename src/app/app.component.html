@@ -1,27 +1,53 @@
-<app-header />
+<app-header></app-header>
+
 <main>
   <div class="text section-hero">
     <h1>Premium shopping experiences at a fraction of the cost</h1>
     <p>
-      From immersive retail to stunning digital design, showcase your brand on the only cost-effective platform for
-      scale.
+      From immersive retail to stunning digital design, showcase your brand on
+      the only cost-effective platform for scale.
     </p>
   </div>
   <div class="header-carousel">
     <h1>Top Hottest Products</h1>
     <p>
-      <span>&#139;</span>
-      <span>&#155;</span>
+      <span> < </span>
+      <span>></span>
     </p>
   </div>
   <section class="section-carousel">
-    <div class="product">
+    <ng-container *ngFor="let product of arrayProduct">
+      <div class="product">
+        <picture>
+          <img [src]="product.image" alt="" />
+        </picture>
+        <div class="detail">
+          <p>
+            <b>{{ product.name }}</b
+            ><br />
+            <small>{{ product.status }}</small>
+          </p>
+          <samp>{{ product.price }}</samp>
+        </div>
+        <div class="button">
+          <p class="star">
+            <strong>&star;</strong>
+            <strong>&star;</strong>
+            <strong>&star;</strong>
+            <strong>&star;</strong>
+            <strong>&star;</strong>
+          </p>
+          <a href="#">Add-cart</a>
+        </div>
+      </div>
+    </ng-container>
+    <!-- <div class="product">
       <picture>
-        <img src="image/banner2.png" alt="">
+        <img src="../assets/images/banner1.png" alt="" />
       </picture>
       <div class="detail">
         <p>
-          <b>Product One</b><br>
+          <b>Product One</b><br />
           <small>New arrival</small>
         </p>
         <samp>$45.00</samp>
@@ -39,11 +65,11 @@
     </div>
     <div class="product">
       <picture>
-        <img src="image/banner1.png" alt="">
+        <img src="../assets/images/banner1.png" alt="" />
       </picture>
       <div class="detail">
         <p>
-          <b>Product Two</b><br>
+          <b>Product Two</b><br />
           <small>New arrival</small>
         </p>
         <samp>$45.00</samp>
@@ -61,11 +87,11 @@
     </div>
     <div class="product">
       <picture>
-        <img src="image/banner3.png" alt="">
+        <img src="../assets/images/banner3.png" alt="" />
       </picture>
       <div class="detail">
         <p>
-          <b>Product Three</b><br>
+          <b>Product Three</b><br />
           <small>New arrival</small>
         </p>
         <samp>$45.00</samp>
@@ -83,11 +109,11 @@
     </div>
     <div class="product">
       <picture>
-        <img src="image/banner4.png" alt="">
+        <img src="../assets/images/banner4.png" alt="" />
       </picture>
       <div class="detail">
         <p>
-          <b>Product Four</b><br>
+          <b>Product Four</b><br />
           <small>New arrival</small>
         </p>
         <samp>$45.00</samp>
@@ -105,11 +131,11 @@
     </div>
     <div class="product">
       <picture>
-        <img src="image/watch.png" alt="">
+        <img src="../assets/images/watch.png" alt="" />
       </picture>
       <div class="detail">
         <p>
-          <b>Product Five</b><br>
+          <b>Product Five</b><br />
           <small>New arrival</small>
         </p>
         <samp>$45.00</samp>
@@ -127,11 +153,11 @@
     </div>
     <div class="product">
       <picture>
-        <img src="image/delta.png" alt="">
+        <img src="../assets/images/delta.png" alt="" />
       </picture>
       <div class="detail">
         <p>
-          <b>Product Six</b><br>
+          <b>Product Six</b><br />
           <small>New arrival</small>
         </p>
         <samp>$45.00</samp>
@@ -149,11 +175,11 @@
     </div>
     <div class="product">
       <picture>
-        <img src="image/image3.png" alt="">
+        <img src="../assets/images/image3.png" alt="" />
       </picture>
       <div class="detail">
         <p>
-          <b>Product Seven</b><br>
+          <b>Product Seven</b><br />
           <small>New arrival</small>
         </p>
         <samp>$45.00</samp>
@@ -171,11 +197,11 @@
     </div>
     <div class="product">
       <picture>
-        <img src="image/image2.png" alt="">
+        <img src="../assets/images/image2.png" alt="" />
       </picture>
       <div class="detail">
         <p>
-          <b>Product Eight</b><br>
+          <b>Product Eight</b><br />
           <small>New arrival</small>
         </p>
         <samp>$45.00</samp>
@@ -193,11 +219,11 @@
     </div>
     <div class="product">
       <picture>
-        <img src="image/nokia.png" alt="">
+        <img src="../assets/images/nokia.png" alt="" />
       </picture>
       <div class="detail">
         <p>
-          <b>Product Nine</b><br>
+          <b>Product Nine</b><br />
           <small>New arrival</small>
         </p>
         <samp>$45.00</samp>
@@ -215,11 +241,11 @@
     </div>
     <div class="product">
       <picture>
-        <img src="image/nokia-air.png" alt="">
+        <img src="../assets/images/nokia-air.png" alt="" />
       </picture>
       <div class="detail">
         <p>
-          <b>Product Ten</b><br>
+          <b>Product Ten</b><br />
           <small>New arrival</small>
         </p>
         <samp>$45.00</samp>
@@ -237,11 +263,11 @@
     </div>
     <div class="product">
       <picture>
-        <img src="image/feature_3.png" alt="">
+        <img src="../assets/images/feature_3.png" alt="" />
       </picture>
       <div class="detail">
         <p>
-          <b>Product Eleven</b><br>
+          <b>Product Eleven</b><br />
           <small>New arrival</small>
         </p>
         <samp>$45.00</samp>
@@ -259,11 +285,11 @@
     </div>
     <div class="product">
       <picture>
-        <img src="image/one.png" alt="">
+        <img src="../assets/images/one.png" alt="" />
       </picture>
       <div class="detail">
         <p>
-          <b>Product Twelve</b><br>
+          <b>Product Twelve</b><br />
           <small>New arrival</small>
         </p>
         <samp>$45.00</samp>
@@ -278,19 +304,21 @@
         </p>
         <a href="#">Add-cart</a>
       </div>
-    </div>
+    </div> -->
   </section>
 
-
-
   <section class="section-products">
-    <div class="header-carousel ">
+    <div class="header-carousel">
       <h1 class="">Products Exclusively for you</h1>
     </div>
     <!-- List product -->
     <div class="product-list grid grid--5-col">
       <div class="productdto-list">
-        <img class="product-image" src="image/feature_3.png" alt="">
+        <img
+          class="product-image"
+          src="../assets/images/feature_3.png"
+          alt=""
+        />
         <div class="product-detail">
           <a href="" class="product-title">Nike Shoes</a>
           <p class="product-price">$45.00</p>
@@ -308,7 +336,11 @@
       </div>
 
       <div class="productdto-list">
-        <img class="product-image" src="image/feature_3.png" alt="">
+        <img
+          class="product-image"
+          src="../assets/images/feature_3.png"
+          alt=""
+        />
         <div class="product-detail">
           <a href="" class="product-title">Nike Shoes</a>
           <p class="product-price">$45.00</p>
@@ -326,7 +358,11 @@
       </div>
 
       <div class="productdto-list">
-        <img class="product-image" src="image/feature_3.png" alt="">
+        <img
+          class="product-image"
+          src="../assets/images/feature_3.png"
+          alt=""
+        />
         <div class="product-detail">
           <a href="" class="product-title">Nike Shoes</a>
           <p class="product-price">$45.00</p>
@@ -344,7 +380,11 @@
       </div>
 
       <div class="productdto-list">
-        <img class="product-image" src="image/feature_3.png" alt="">
+        <img
+          class="product-image"
+          src="../assets/images/feature_3.png"
+          alt=""
+        />
         <div class="product-detail">
           <a href="" class="product-title">Nike Shoes</a>
           <p class="product-price">$45.00</p>
@@ -362,7 +402,11 @@
       </div>
 
       <div class="productdto-list">
-        <img class="product-image" src="image/feature_3.png" alt="">
+        <img
+          class="product-image"
+          src="../assets/images/feature_3.png"
+          alt=""
+        />
         <div class="product-detail">
           <a href="" class="product-title">Nike Shoes</a>
           <p class="product-price">$45.00</p>
@@ -380,7 +424,11 @@
       </div>
 
       <div class="productdto-list">
-        <img class="product-image" src="image/feature_3.png" alt="">
+        <img
+          class="product-image"
+          src="../assets/images/feature_3.png"
+          alt=""
+        />
         <div class="product-detail">
           <a href="" class="product-title">Nike Shoes</a>
           <p class="product-price">$45.00</p>
@@ -398,7 +446,11 @@
       </div>
 
       <div class="productdto-list">
-        <img class="product-image" src="image/feature_3.png" alt="">
+        <img
+          class="product-image"
+          src="../assets/images/feature_3.png"
+          alt=""
+        />
         <div class="product-detail">
           <a href="" class="product-title">Nike Shoes</a>
           <p class="product-price">$45.00</p>
@@ -416,7 +468,11 @@
       </div>
 
       <div class="productdto-list">
-        <img class="product-image" src="image/feature_3.png" alt="">
+        <img
+          class="product-image"
+          src="../assets/images/feature_3.png"
+          alt=""
+        />
         <div class="product-detail">
           <a href="" class="product-title">Nike Shoes</a>
           <p class="product-price">$45.00</p>
@@ -434,7 +490,11 @@
       </div>
 
       <div class="productdto-list">
-        <img class="product-image" src="image/feature_3.png" alt="">
+        <img
+          class="product-image"
+          src="../assets/images/feature_3.png"
+          alt=""
+        />
         <div class="product-detail">
           <a href="" class="product-title">Nike Shoes</a>
           <p class="product-price">$45.00</p>
@@ -452,7 +512,11 @@
       </div>
 
       <div class="productdto-list">
-        <img class="product-image" src="image/feature_3.png" alt="">
+        <img
+          class="product-image"
+          src="../assets/images/feature_3.png"
+          alt=""
+        />
         <div class="product-detail">
           <a href="" class="product-title">Nike Shoes</a>
           <p class="product-price">$45.00</p>
@@ -468,8 +532,6 @@
           </div>
         </div>
       </div>
-
     </div>
-
   </section>
 </main>
